@@ -55,6 +55,7 @@ class RoverState():
         self.mode = 'forward' # Current mode (can be forward or stop)
         self.throttle_set = 0.2 # Throttle setting when accelerating
         self.brake_set = 10 # Brake setting when braking
+        self.idel_time = 0 # Timer to count when the rover is stuck
         # The stop_forward and go_forward fields below represent total count
         # of navigable terrain pixels.  This is a very crude form of knowing
         # when you can keep going and when you should stop.  Feel free to
@@ -70,6 +71,7 @@ class RoverState():
         # Update this image with the positions of navigable terrain
         # obstacles and rock samples
         self.worldmap = np.zeros((200, 200, 3), dtype=np.float) 
+        self.colormap = np.zeros((200, 200, 3), dtype=np.float)
         self.samples_pos = None # To store the actual sample positions
         self.samples_to_find = 0 # To store the initial count of samples
         self.samples_located = 0 # To store number of samples located on map
