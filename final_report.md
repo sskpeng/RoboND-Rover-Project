@@ -115,6 +115,7 @@ Ultimately, intelligent autonomous driving algorithm such as A\* method to find 
 
 Currently the rover could not agilely avoid the small rocks on the road. Also the rover 'shakes' it heading direction pretty large in response to the terrain change even though the obstacles are not directly in front of the rover. A better throttle control and filter with respect to the non-significant object could improve the rover motion.
 
+3) Added a function to display current rover location on the worldmap.
 
 
  
